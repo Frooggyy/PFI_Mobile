@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PFIJava</string>
-    <string name = "AM_Bienvenue">Bienvenue chez _______</string>
-    <string name = "AM_PlaceholderNom">Nom</string>
-    <string name = "AM_PlaceholderPass">Mot de passe</string>
-    <string name = "AM_BtnLogin">Se Connecter</string>
+    <string name="AM_Bienvenue">Bienvenue chez _______</string>
+    <string name="AM_PlaceholderNom">Nom</string>
+    <string name="AM_PlaceholderPass">Mot de passe</string>
+    <string name="AM_BtnLogin">Se Connecter</string>
 </resources>
