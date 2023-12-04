@@ -1,8 +1,20 @@
 <resources>
     <string name="app_name">PFIJava</string>
-    <string name="AM_Bienvenue">Bienvenue chez _______</string>
+    <string name="AM_Bienvenue">MARCHER.online</string>
     <string name="AM_PlaceholderNom">Nom</string>
     <string name="AM_PlaceholderPass">Mot de passe</string>
     <string name="AM_BtnLogin">Se Connecter</string>
     <string name="errorLogin">"Le nom d'utilisateur ou le mot de passe est invalide. Veuiller recommencer."</string>
+
+    -- Description des articles
+    <string name="articleDesc_banane"></string>
+    <string name="articleDesc_cerise"></string>
+    <string name="articleDesc_chou"></string>
+    <string name="articleDesc_champignon"></string>
+    <string name="articleDesc_courgette"></string>
+    <string name="articleDesc_epinard"></string>
+    <string name="articleDesc_mais"></string>
+    <string name="articleDesc_orange"></string>
+    <string name="articleDesc_pois"></string>
+    <string name="articleDesc_raisin"></string>
 </resources>
