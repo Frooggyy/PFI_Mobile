@@ -40,7 +40,10 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
         String nom = articles.get(position).getNom();
         String prix = articles.get(position).getPrix() + " $";
+
         Drawable img = articles.get(position).getImage();
+
+
         holder.articleNom.setText(nom);
         holder.articlePrix.setText(prix);
         holder.articleImage.setImageDrawable(img);
@@ -71,11 +74,13 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
             articleLigne = itemView.findViewById(R.id.LA_LinearLayout);
             articleImage = (ImageView) itemView.findViewById(R.id.LA_img);
             articleNom = (TextView) itemView.findViewById(R.id.LA_txtNomArticle);
             articlePrix = (TextView) itemView.findViewById(R.id.LA_txtPrix);
             uneLigne = (View) itemView.findViewById(R.id.LA_constraint);
+
 
         }
 
