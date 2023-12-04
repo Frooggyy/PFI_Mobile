@@ -16,6 +16,7 @@ public class ListeEpicerie extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_epicerie);
 
+
         ArrayList<Article> arrArticle = new ArrayList<Article>();
         RecyclerView recycleArticle = (RecyclerView) findViewById(R.id.LE_RecyclerView);
         RemplirArticle(arrArticle);

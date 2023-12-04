@@ -25,15 +25,17 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
     @Override
     public Adaptateur.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflator = LayoutInflater.from(context);
-        View itemView = inflator.inflate(R.layout.ligne_article, parent,false);
 
+        View itemView = inflator.inflate(R.layout.ligne_article, parent,false);
+      
         return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull Adaptateur.MyViewHolder holder, int position) {
+
         String nom = articles.get(position).getNom();
-        String prix = articles.get(position).getPrix() + " $";
+        double prix = articles.get(position).getPrix() + " $";
         holder.articleNom.setText(nom);
         holder.articlePrix.setText(prix);
     }
@@ -45,6 +47,7 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
+
         TextView articleNom;
         TextView articlePrix;
         View uneLigne;
@@ -54,6 +57,7 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
             articleNom = (TextView) itemView.findViewById(R.id.LA_txtNomArticle);
             articlePrix = (TextView) itemView.findViewById(R.id.LA_txtPrix);
             uneLigne = (View) itemView.findViewById(R.id.LA_constraint);
+
         }
 
 

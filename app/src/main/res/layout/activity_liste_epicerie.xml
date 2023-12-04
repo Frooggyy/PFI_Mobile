@@ -4,24 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ListeEpicerie">
 
     <ScrollView
+
         android:layout_width="346dp"
         android:layout_height="295dp"
         android:layout_marginTop="112dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/LE_RecyclerView"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content">
 
         </androidx.recyclerview.widget.RecyclerView>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
