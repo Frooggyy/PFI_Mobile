@@ -5,6 +5,10 @@
     <string name="AM_PlaceholderPass">Mot de passe</string>
     <string name="AM_BtnLogin">Se Connecter</string>
     <string name="errorLogin">"Le nom d'utilisateur ou le mot de passe est invalide. Veuiller recommencer."</string>
+    <string name="achatTitre">"Panier d'article pour achat"</string>
+    <string name="achat_btnViderPanier">Annuler</string>
+    <string name="achat_btnAchatPanier">Valider</string>
+    <string name="poursuivre_achats">continuer mes achats</string>
 
     -- Description des articles
     <string name="articleDesc_banane"></string>
