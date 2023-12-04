@@ -1,12 +1,15 @@
 package com.example.pfijava;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,6 +44,16 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
         holder.articleNom.setText(nom);
         holder.articlePrix.setText(prix);
         holder.articleImage.setImageDrawable(img);
+        holder.articleLigne.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                ListeEpicerie.
+                Intent versDA = new Intent(ListeEpicerie,);
+
+            }
+        });
+
+
     }
 
     @Override
@@ -50,7 +63,7 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-
+        LinearLayout articleLigne;
         TextView articleNom;
         TextView articlePrix;
         ImageView articleImage;
@@ -58,6 +71,7 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            articleLigne = itemView.findViewById(R.id.LA_LinearLayout);
             articleImage = (ImageView) itemView.findViewById(R.id.LA_img);
             articleNom = (TextView) itemView.findViewById(R.id.LA_txtNomArticle);
             articlePrix = (TextView) itemView.findViewById(R.id.LA_txtPrix);
