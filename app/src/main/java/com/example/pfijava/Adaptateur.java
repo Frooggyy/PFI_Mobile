@@ -35,7 +35,7 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
     public void onBindViewHolder(@NonNull Adaptateur.MyViewHolder holder, int position) {
 
         String nom = articles.get(position).getNom();
-        double prix = articles.get(position).getPrix() + " $";
+        String prix = articles.get(position).getPrix() + " $";
         holder.articleNom.setText(nom);
         holder.articlePrix.setText(prix);
     }
@@ -54,9 +54,9 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            articleNom = (TextView) itemView.findViewById(R.id.LA_txtNomArticle);
-            articlePrix = (TextView) itemView.findViewById(R.id.LA_txtPrix);
-            uneLigne = (View) itemView.findViewById(R.id.LA_constraint);
+            articleNom = (TextView) itemView.findViewById(R.id.LP_txtNomArticle);
+            articlePrix = (TextView) itemView.findViewById(R.id.LP_txtSousTotal);
+            uneLigne = (View) itemView.findViewById(R.id.LP_constraint);
 
         }
 
