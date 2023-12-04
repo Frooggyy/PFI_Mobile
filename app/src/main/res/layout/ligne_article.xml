@@ -8,26 +8,39 @@
     android:layout_gravity="center_horizontal">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/LA_LinearLayout"
+        android:layout_width="412dp"
+        android:layout_height="66dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/LA_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/LP_txtNomArticle"
             android:layout_width="80dp"
-            android:layout_height="24dp"
+            android:layout_height="50dp"
             android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
             android:text="nomArticle"
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/LP_txtSousTotal"
-            android:layout_width="64dp"
-            android:layout_height="24dp"
+
+            android:id="@+id/LA_txtPrix"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
             android:layout_marginStart="70dp"
             android:layout_marginEnd="51dp"
+            android:gravity="center_vertical"
             android:text="prix" />
 
     </LinearLayout>

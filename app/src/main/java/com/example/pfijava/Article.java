@@ -1,16 +1,19 @@
 package com.example.pfijava;
 
+import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
+
 public class Article {
     private String nom;
     private double prix;
-    private String image;
+    private Drawable image;
     private String description;
 
-    public String getImage() {
+    public Drawable getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Drawable image) {
         this.image = image;
     }
 
@@ -38,7 +41,7 @@ public class Article {
         this.description = description;
     }
 
-    public Article(String nom, double prix, String image, String description) {
+    public Article(String nom, double prix, Drawable image, String description) {
         this.nom = nom;
         this.prix = prix;
         this.image = image;

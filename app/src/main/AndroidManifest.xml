@@ -13,14 +13,11 @@
         android:theme="@style/Theme.PFIJava"
         tools:targetApi="31">
         <activity
-            android:name=".ListeAchat"
+
+            android:name=".ActivityDetailArticle"
             android:exported="false" />
         <activity
-            android:name=".Panier"
-            android:exported="false"
-            android:label="@string/title_activity_panier"
-            android:theme="@style/Theme.PFIJava" />
-        <activity
+
             android:name=".ListeEpicerie"
             android:exported="false" />
         <activity
