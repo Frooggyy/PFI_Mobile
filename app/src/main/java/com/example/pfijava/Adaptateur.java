@@ -47,14 +47,14 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
         holder.articleNom.setText(nom);
         holder.articlePrix.setText(prix);
         holder.articleImage.setImageDrawable(img);
-        holder.articleLigne.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                ListeEpicerie.
-                Intent versDA = new Intent(ListeEpicerie,);
-
-            }
-        });
+//        holder.articleLigne.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                ListeEpicerie.
+//                Intent versDA = new Intent(ListeEpicerie,);
+//
+//            }
+//        });
 
 
     }
@@ -80,8 +80,6 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
             articleNom = (TextView) itemView.findViewById(R.id.LA_txtNomArticle);
             articlePrix = (TextView) itemView.findViewById(R.id.LA_txtPrix);
             uneLigne = (View) itemView.findViewById(R.id.LA_constraint);
-
-
         }
 
 
