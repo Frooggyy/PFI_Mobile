@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -41,5 +42,10 @@ public class ListeEpicerie extends AppCompatActivity {
         listeArticles.add(new Article("orange",0.99,getResources().getDrawable(R.drawable.orange, null),getResources().getString(R.string.articleDesc_orange)));
         listeArticles.add(new Article("pois",2.99,getResources().getDrawable(R.drawable.pois, null),getResources().getString(R.string.articleDesc_pois)));
         listeArticles.add(new Article("raisin",3.50,getResources().getDrawable(R.drawable.raisin, null),getResources().getString(R.string.articleDesc_raisin)));
+    }
+
+    public static Context prendreContexte(){
+        Context context = ListeEpicerie.prendreContexte().getApplicationContext();
+        return context;
     }
 }

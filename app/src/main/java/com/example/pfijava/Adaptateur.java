@@ -1,5 +1,7 @@
 package com.example.pfijava;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -22,8 +24,8 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
     Context context;
     ArrayList<Article> articles;
 
-    public Adaptateur(Context context, ArrayList<Article> arrArticle) {
-        this.context = context;
+    public Adaptateur(Context con, ArrayList<Article> arrArticle) {
+        this.context = con;
         this.articles = arrArticle;
     }
 
@@ -37,7 +39,6 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull Adaptateur.MyViewHolder holder, int position) {
-
         String nom = articles.get(position).getNom();
         String prix = articles.get(position).getPrix() + " $";
         Drawable img = articles.get(position).getImage();
@@ -47,9 +48,11 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
         holder.articleLigne.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                ListeEpicerie.
-                Intent versDA = new Intent(ListeEpicerie,);
-
+                Intent versDA = new Intent(context, MainActivity.class);
+                //versDA.putExtra("nom", nom);
+                //versDA.putExtra("prix", prix);
+                //versDA.putExtra("desc", articles.get(position).getDescription());
+                startActivity(context, versDA, null);
             }
         });
 
