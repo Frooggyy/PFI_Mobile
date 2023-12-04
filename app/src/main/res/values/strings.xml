@@ -10,6 +10,7 @@
     <string name="achat_btnAchatPanier">Valider</string>
     <string name="poursuivre_achats">continuer mes achats</string>
     <string name="voirPanier">Voir Panier</string>
+    <string name="achat_txtPrixTotal">Prix Total</string>
 
     -- Description des articles
     <string name="articleDesc_banane"></string>
