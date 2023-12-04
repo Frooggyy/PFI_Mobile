@@ -1,9 +1,12 @@
 package com.example.pfijava;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,9 +28,7 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
     @Override
     public Adaptateur.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflator = LayoutInflater.from(context);
-
         View itemView = inflator.inflate(R.layout.ligne_article, parent,false);
-      
         return new MyViewHolder(itemView);
     }
 
@@ -35,9 +36,11 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
     public void onBindViewHolder(@NonNull Adaptateur.MyViewHolder holder, int position) {
 
         String nom = articles.get(position).getNom();
-        double prix = articles.get(position).getPrix() + " $";
+        String prix = articles.get(position).getPrix() + " $";
+        Drawable img = articles.get(position).getImage();
         holder.articleNom.setText(nom);
         holder.articlePrix.setText(prix);
+        holder.articleImage.setImageDrawable(img);
     }
 
     @Override
@@ -50,10 +53,12 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
         TextView articleNom;
         TextView articlePrix;
+        ImageView articleImage;
         View uneLigne;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            articleImage = (ImageView) itemView.findViewById(R.id.LA_img);
             articleNom = (TextView) itemView.findViewById(R.id.LA_txtNomArticle);
             articlePrix = (TextView) itemView.findViewById(R.id.LA_txtPrix);
             uneLigne = (View) itemView.findViewById(R.id.LA_constraint);
