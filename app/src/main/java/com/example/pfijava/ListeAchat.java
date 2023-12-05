@@ -28,7 +28,7 @@ public class ListeAchat extends AppCompatActivity {
         ArrayList<Article> arrArticle = new ArrayList<Article>();
         RecyclerView recycleAchat = (RecyclerView) findViewById(R.id.achat_RecyclerView);
 
-        adaptateur = new PanierAdapter(getApplicationContext());
+        adaptateur = new PanierAdapter(getApplicationContext(), this);
         recycleAchat.setAdapter(adaptateur);
 
         recycleAchat.setLayoutManager(new LinearLayoutManager(this));
@@ -40,13 +40,7 @@ public class ListeAchat extends AppCompatActivity {
         Button btnAnnuler = (Button) findViewById(R.id.achat_btnViderPanier);
         Button btnValider = (Button) findViewById(R.id.achat_btnAchatPanier);
 
-        TextView totalPrix = (TextView) findViewById(R.id.achat_txtCalculTotal);
-
-        double total = panier.calculerPrixTotal();
-        String totalArrondi = String.format("%.2f", total);
-        totalPrix.setText(totalArrondi + " $");
-
-
+        MettreAJourTotal();
 
         btnVersListe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +58,6 @@ public class ListeAchat extends AppCompatActivity {
 
                 Intent versLE = new Intent(ListeAchat.this, ListeEpicerie.class);
                 startActivity(versLE);
-
             }
         });
 
@@ -84,7 +77,10 @@ public class ListeAchat extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         adaptateur.notifyDataSetChanged();
+        MettreAJourTotal();
+    }
 
+    public void MettreAJourTotal(){
         TextView totalPrix = (TextView) findViewById(R.id.achat_txtCalculTotal);
         double total = panier.calculerPrixTotal();
         String totalArrondi = String.format("%.2f", total);
