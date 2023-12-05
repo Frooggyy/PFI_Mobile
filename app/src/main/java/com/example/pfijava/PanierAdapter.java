@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -50,6 +51,15 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         holder.Nom.setText(nomArticle);
         holder.Qty.setText(String.valueOf(quantite));
         holder.Prix.setText(totalArrondi + " $");
+
+        int imgID = context.getResources().getIdentifier(nomArticle, "drawable", context.getPackageName());
+
+        if (imgID != 0) {
+            holder.img.setImageResource(imgID);
+        } else {
+            holder.img.setImageResource(R.drawable.nondefini);
+        }
+
     }
 
     @Override
@@ -61,12 +71,14 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         TextView Nom;
         TextView Qty;
         TextView Prix;
+        ImageView img;
 
         public PanierViewHolder(@NonNull View itemView) {
             super(itemView);
             Nom = itemView.findViewById(R.id.LP_txtNomArticle);
             Qty = itemView.findViewById(R.id.LP_txtQty);
             Prix = itemView.findViewById(R.id.LP_txtPrix);
+            img = itemView.findViewById(R.id.LP_imageView);
         }
     }
 
