@@ -11,6 +11,8 @@
     <string name="poursuivre_achats">continuer mes achats</string>
     <string name="voirPanier">Voir Panier</string>
     <string name="achat_txtPrixTotal">Prix Total</string>
+    <string name="VA_titre">Achat compléter</string>
+    <string name="VA_btnRetour">Retour à la liste d\'article</string>
 
     -- Description des articles
     <string name="articleDesc_banane"></string>
