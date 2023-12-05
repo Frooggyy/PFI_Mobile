@@ -25,14 +25,29 @@
             android:layout_marginRight="20dp"
             android:text="LP_txtNomArticle" />
 
+        <Button
+            android:id="@+id/btnRetrait"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="16sp" />
+
         <TextView
             android:id="@+id/LP_txtQty"
             android:layout_width="20dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="LP_txtQty" />
+
+        <Button
+            android:id="@+id/btnAjt"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+" />
 
         <TextView
             android:id="@+id/LP_txtPrix"

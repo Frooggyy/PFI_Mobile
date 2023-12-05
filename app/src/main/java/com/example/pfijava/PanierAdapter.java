@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -60,6 +61,30 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
             holder.img.setImageResource(R.drawable.nondefini);
         }
 
+        holder.btnAjt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Panier.getInstance().ajouterArticle(nomArticle, prixArticle);
+                notifyDataSetChanged();
+            }
+        });
+
+        holder.btnRetrait.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Panier panier = Panier.getInstance();
+                Panier.getInstance().retirerArticle(nomArticle);
+                int newQuantite = panier.getQuantiteArticle(nomArticle);
+
+                if (newQuantite == 0) {
+                    panier.retirerArticle(nomArticle);
+                    ListArticles.remove(holder.getAdapterPosition());
+                    notifyDataSetChanged();
+                } else {
+                    notifyDataSetChanged();
+                }
+            }
+        });
     }
 
     @Override
@@ -72,6 +97,8 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         TextView Qty;
         TextView Prix;
         ImageView img;
+        Button btnAjt;
+        Button btnRetrait;
 
         public PanierViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -79,6 +106,8 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
             Qty = itemView.findViewById(R.id.LP_txtQty);
             Prix = itemView.findViewById(R.id.LP_txtPrix);
             img = itemView.findViewById(R.id.LP_imageView);
+            btnAjt = itemView.findViewById(R.id.btnAjt);
+            btnRetrait = itemView.findViewById(R.id.btnRetrait);
         }
     }
 
