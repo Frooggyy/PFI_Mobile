@@ -70,4 +70,8 @@ public class Panier {
     public void viderPanier() {
         articlesDansPanier.clear();
     }
+
+    public double calculerPrixTotal() {
+        return calculerTotal(prixArticles);
+    }
 }
