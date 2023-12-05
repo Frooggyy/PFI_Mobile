@@ -22,11 +22,13 @@ import java.util.Map;
 public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierViewHolder> {
 
     private Context context;
+    private ListeAchat listeAchat;
     private List<Map.Entry<String, Integer>> ListArticles;
 
-    public PanierAdapter(Context context) {
+    public PanierAdapter(Context context, ListeAchat listeAchat) {
         this.context = context;
         this.ListArticles = new ArrayList<>(Panier.getInstance().getArticlesDansPanier().entrySet());
+        this.listeAchat = listeAchat;
         updateList();
     }
 
@@ -61,19 +63,23 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
             holder.img.setImageResource(R.drawable.nondefini);
         }
 
+        Panier panier = Panier.getInstance();
+
         holder.btnAjt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Panier.getInstance().ajouterArticle(nomArticle, prixArticle);
                 notifyDataSetChanged();
+                listeAchat.MettreAJourTotal();
             }
         });
 
         holder.btnRetrait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Panier panier = Panier.getInstance();
+
                 Panier.getInstance().retirerArticle(nomArticle);
+
                 int newQuantite = panier.getQuantiteArticle(nomArticle);
 
                 if (newQuantite == 0) {
@@ -83,6 +89,9 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
                 } else {
                     notifyDataSetChanged();
                 }
+                notifyDataSetChanged();
+
+                listeAchat.MettreAJourTotal();
             }
         });
     }
@@ -96,9 +105,11 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         TextView Nom;
         TextView Qty;
         TextView Prix;
+        TextView PrixTotal;
         ImageView img;
         Button btnAjt;
         Button btnRetrait;
+
 
         public PanierViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -108,6 +119,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
             img = itemView.findViewById(R.id.LP_imageView);
             btnAjt = itemView.findViewById(R.id.btnAjt);
             btnRetrait = itemView.findViewById(R.id.btnRetrait);
+            PrixTotal = itemView.findViewById(R.id.achat_txtCalculTotal);
         }
     }
 

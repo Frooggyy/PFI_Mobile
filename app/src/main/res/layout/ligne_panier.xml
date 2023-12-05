@@ -8,21 +8,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/LP_imageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:src="@drawable/banane" />
+            android:src="@drawable/nondefini" />
 
         <TextView
             android:id="@+id/LP_txtNomArticle"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
             android:text="LP_txtNomArticle" />
 
         <Button
@@ -35,12 +41,14 @@
 
         <TextView
             android:id="@+id/LP_txtQty"
-            android:layout_width="20dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="LP_txtQty" />
+            android:gravity="center_vertical"
+            android:text="LP_txtQty"
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/btnAjt"
@@ -51,11 +59,13 @@
 
         <TextView
             android:id="@+id/LP_txtPrix"
-            android:layout_width="20dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:text="LP_txtPrix" />
+            android:gravity="center_vertical"
+            android:text="LP_txtPrix"
+            android:textAlignment="center" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
