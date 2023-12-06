@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ListeEpicerie extends AppCompatActivity {
 
@@ -29,6 +32,21 @@ public class ListeEpicerie extends AppCompatActivity {
 
         recycleArticle.setItemAnimator(new DefaultItemAnimator());
         recycleArticle.setHasFixedSize(true);
+
+        adaptateur.setOnClickListener(new Adaptateur.OnClickListener() {            // TOUTE LA SECTION DE ONLCICKLISTENER DU RECYCLER VIEW
+                                                                                    // PRIS DE https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
+            @Override
+            public void onClick(Article article) {
+                Intent versDA = new Intent(ListeEpicerie.this, ActivityDetailArticle.class);
+                versDA.putExtra("nom", article.getNom());
+                versDA.putExtra("prix", article.getPrix());
+                versDA.putExtra("desc", article.getDescription());
+                startActivity(versDA);
+            }
+        });
+
+
+
     }
 
     void RemplirArticle(ArrayList<Article> listeArticles) {
@@ -44,8 +62,4 @@ public class ListeEpicerie extends AppCompatActivity {
         listeArticles.add(new Article("raisin",3.50,getResources().getDrawable(R.drawable.raisin, null),getResources().getString(R.string.articleDesc_raisin)));
     }
 
-    public static Context prendreContexte(){
-        Context context = ListeEpicerie.prendreContexte().getApplicationContext();
-        return context;
-    }
 }

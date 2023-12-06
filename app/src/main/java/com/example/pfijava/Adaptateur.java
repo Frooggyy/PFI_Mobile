@@ -23,6 +23,8 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
     Context context;
     ArrayList<Article> articles;
+    OnClickListener onClickListener;    // TOUTE LA SECTION DE ONLCICKLISTENER DU RECYCLER VIEW
+                                        // PRIS DE https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
 
     public Adaptateur(Context con, ArrayList<Article> arrArticle) {
         this.context = con;
@@ -45,18 +47,26 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
         holder.articleNom.setText(nom);
         holder.articlePrix.setText(prix);
         holder.articleImage.setImageDrawable(img);
-        holder.articleLigne.setOnClickListener(new View.OnClickListener(){
+
+        holder.articleLigne.setOnClickListener(new View.OnClickListener() { // TOUTE LA SECTION DE ONLCICKLISTENER DU RECYCLER VIEW
+                                                                            // PRIS DE https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
             @Override
             public void onClick(View v) {
-                Intent versDA = new Intent(context, MainActivity.class);
-                //versDA.putExtra("nom", nom);
-                //versDA.putExtra("prix", prix);
-                //versDA.putExtra("desc", articles.get(position).getDescription());
-                startActivity(context, versDA, null);
+                if(onClickListener != null){
+                    onClickListener.onClick(articles.get(position));
+                }
             }
         });
 
 
+    }
+    public void setOnClickListener(OnClickListener onClickListener) {// TOUTE LA SECTION DE ONLCICKLISTENER DU RECYCLER VIEW
+                                                                    // PRIS DE https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
+        this.onClickListener = onClickListener;
+    }
+    public interface OnClickListener {                              // TOUTE LA SECTION DE ONLCICKLISTENER DU RECYCLER VIEW
+                                                                    // PRIS DE https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
+        void onClick(Article article);
     }
 
     @Override
