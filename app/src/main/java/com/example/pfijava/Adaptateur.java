@@ -43,10 +43,14 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
     public void onBindViewHolder(@NonNull Adaptateur.MyViewHolder holder, int position) {
         String nom = articles.get(position).getNom();
         String prix = articles.get(position).getPrix() + " $";
+
         Drawable img = articles.get(position).getImage();
+
+
         holder.articleNom.setText(nom);
         holder.articlePrix.setText(prix);
         holder.articleImage.setImageDrawable(img);
+
 
         holder.articleLigne.setOnClickListener(new View.OnClickListener() { // TOUTE LA SECTION DE ONLCICKLISTENER DU RECYCLER VIEW
                                                                             // PRIS DE https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
@@ -57,6 +61,7 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
                 }
             }
         });
+
 
 
     }
@@ -84,12 +89,12 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
             articleLigne = itemView.findViewById(R.id.LA_LinearLayout);
             articleImage = (ImageView) itemView.findViewById(R.id.LA_img);
             articleNom = (TextView) itemView.findViewById(R.id.LA_txtNomArticle);
             articlePrix = (TextView) itemView.findViewById(R.id.LA_txtPrix);
             uneLigne = (View) itemView.findViewById(R.id.LA_constraint);
-
         }
 
 

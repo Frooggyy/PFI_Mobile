@@ -13,11 +13,19 @@
         android:theme="@style/Theme.PFIJava"
         tools:targetApi="31">
         <activity
+            android:name=".AchatValider"
+            android:exported="false" />
+        <activity
+            android:name=".ListeAchat"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
             android:name=".ActivityDetailArticle"
             android:exported="false" />
         <activity
             android:name=".ListeEpicerie"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTop" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

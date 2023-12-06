@@ -5,21 +5,24 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class ListeEpicerie extends AppCompatActivity {
+    private Panier panier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_epicerie);
 
+        panier = Panier.getInstance();
 
         ArrayList<Article> arrArticle = new ArrayList<Article>();
         RecyclerView recycleArticle = (RecyclerView) findViewById(R.id.LE_RecyclerView);
@@ -45,8 +48,23 @@ public class ListeEpicerie extends AppCompatActivity {
             }
         });
 
+        Button btnVersPanier = (Button) findViewById(R.id.LE_btnVersPanier);
+
+//        ////// Pour test on fera mieux plustard
+        panier.ajouterArticle(arrArticle.get(0).getNom(),arrArticle.get(0).getPrix());
+        panier.ajouterArticle(arrArticle.get(1).getNom(),arrArticle.get(1).getPrix());
+        panier.ajouterArticle(arrArticle.get(1).getNom(),arrArticle.get(1).getPrix());
+        panier.ajouterArticle(arrArticle.get(2).getNom(),arrArticle.get(2).getPrix());
+//        //////
 
 
+        btnVersPanier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent versPanier = new Intent(ListeEpicerie.this, ListeAchat.class);
+                startActivity(versPanier);
+            }
+        });
     }
 
     void RemplirArticle(ArrayList<Article> listeArticles) {
