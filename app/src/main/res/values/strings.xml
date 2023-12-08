@@ -16,7 +16,6 @@
     <string name="poursuivre_achats">Poursuivre Mes Achats</string>
     <string name="voirPanier">Voir Panier</string>
 
-    <string name="achat_txtPrixTotal">Prix Total</string>
     <string name="VA_titre">Votre Commande</string>
     <string name="VA_btnRetour">Retour au marché</string>
     <string name="Com_txtConfirmation">Merci pour votre achat !</string>
