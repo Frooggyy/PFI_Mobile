@@ -5,14 +5,15 @@
     <string name="AM_PlaceholderPass">Mot de passe</string>
     <string name="AM_BtnLogin">Se Connecter</string>
     <string name="errorLogin">"Le nom d'utilisateur ou le mot de passe est invalide. Veuiller recommencer."</string>
-    <string name="achatTitre">"Panier d'article pour achat"</string>
+    <string name="achatTitre">"Panier"</string>
     <string name="achat_btnViderPanier">Annuler</string>
-    <string name="achat_btnAchatPanier">Valider</string>
-    <string name="poursuivre_achats">continuer mes achats</string>
+    <string name="achat_btnAchatPanier">Paiement</string>
+    <string name="poursuivre_achats">Poursuivre Mes Achats</string>
     <string name="voirPanier">Voir Panier</string>
     <string name="achat_txtPrixTotal">Prix Total</string>
-    <string name="VA_titre">Achat compléter</string>
-    <string name="VA_btnRetour">Retour à la liste d\'article</string>
+    <string name="VA_titre">Votre Commande</string>
+    <string name="VA_btnRetour">Retour au marché</string>
+    <string name="Com_txtConfirmation">Merci pour votre achat !</string>
 
     -- Description des articles
     <string name="articleDesc_banane"></string>
