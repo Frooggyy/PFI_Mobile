@@ -6,4 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".AchatValider">
 
+    <ImageView
+        android:id="@+id/AV_imgBackground2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/VA_txtTitre"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#673AB7"
+            android:gravity="center"
+            android:text="@string/VA_titre"
+            android:textAlignment="center"
+            android:textColor="#F3EFEF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/Com_textView_txtConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="#C1F6F0F0"
+            android:backgroundTint="#F1EAEA"
+            android:gravity="center"
+            android:text="@string/Com_txtConfirmation"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <VideoView
+            android:id="@+id/AV_videoView_valider"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_retour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/VA_btnRetour" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

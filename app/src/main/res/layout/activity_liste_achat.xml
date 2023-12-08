@@ -51,6 +51,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
             android:orientation="horizontal">
 
             <Space
@@ -65,48 +66,52 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/poursuivre_achats"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/achat_RecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="244dp"
+            android:layout_height="325dp"
             android:background="#C1F6F4F4">
 
         </androidx.recyclerview.widget.RecyclerView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:background="#673AB7"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/achat_txtPrixTotal"
                 android:layout_width="150dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="@string/achat_txtPrixTotal"
                 android:textAlignment="center"
                 android:textColor="#F8F6F6"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/achat_txtCalculTotal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="achat_txtCalculTotal"
                 android:textAlignment="center"
                 android:textColor="#F6F2F2"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:orientation="horizontal">
 
             <Button
@@ -116,7 +121,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="@string/achat_btnViderPanier" />
+                android:text="@string/achat_btnViderPanier"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/achat_btnAchatPanier"
@@ -125,7 +131,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:text="@string/achat_btnAchatPanier" />
+                android:text="@string/achat_btnAchatPanier"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 

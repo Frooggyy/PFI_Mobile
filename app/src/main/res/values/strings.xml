@@ -6,15 +6,21 @@
     <string name="AM_PlaceholderNom">Nom</string>
     <string name="AM_PlaceholderPass">Mot de passe</string>
     <string name="AM_BtnLogin">Se Connecter</string>
-    <string name="errorLogin">"Le nom d\'utilisateur ou le mot de passe est invalide. Veuiller recommencer."</string>
+    <string name="errorLogin">"Le nom d'utilisateur ou le mot de passe est invalide. Veuiller recommencer."</string>
+    <string name="achatTitre">"Panier"</string>
 
     -- Panier
     <string name="achat_txtPrixTotal">Prix Total</string>
-    <string name="achatTitre">"Panier d\'article pour achat"</string>
     <string name="achat_btnViderPanier">Annuler</string>
-    <string name="achat_btnAchatPanier">Valider</string>
-    <string name="poursuivre_achats">continuer mes achats</string>
+    <string name="achat_btnAchatPanier">Paiement</string>
+    <string name="poursuivre_achats">Poursuivre Mes Achats</string>
     <string name="voirPanier">Voir Panier</string>
+
+    <string name="achat_txtPrixTotal">Prix Total</string>
+    <string name="VA_titre">Votre Commande</string>
+    <string name="VA_btnRetour">Retour au marché</string>
+    <string name="Com_txtConfirmation">Merci pour votre achat !</string>
+
 
     -- Page Description Articles
     <string name="DA_PlaceholderNbArticle">1</string>
@@ -22,7 +28,7 @@
     <string name="DA_RetirerUnArticle">-</string>
     <string name="DA_AjouterAuPanier">Ajouter au panier</string>
     <string name="DA_DescriptionImage">Image de l\'article</string>
-"
+
 
 
     -- Description des articles
