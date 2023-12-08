@@ -44,12 +44,12 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
         String nom = articles.get(position).getNom();
         String prix = articles.get(position).getPrix() + " $";
 
-        Drawable img = articles.get(position).getImage();
+        int img = articles.get(position).getIdImage();
 
 
         holder.articleNom.setText(nom);
         holder.articlePrix.setText(prix);
-        holder.articleImage.setImageDrawable(img);
+        holder.articleImage.setImageResource(img);
 
 
         holder.articleLigne.setOnClickListener(new View.OnClickListener() { // TOUTE LA SECTION DE ONLCICKLISTENER DU RECYCLER VIEW
