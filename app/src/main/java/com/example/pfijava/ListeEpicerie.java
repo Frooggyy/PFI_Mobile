@@ -11,10 +11,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class ListeEpicerie extends AppCompatActivity {
+public class ListeEpicerie extends AppCompatActivity implements Serializable {
     private Panier panier;
 
     @Override
@@ -44,6 +45,7 @@ public class ListeEpicerie extends AppCompatActivity {
                 versDA.putExtra("nom", article.getNom());
                 versDA.putExtra("prix", article.getPrix());
                 versDA.putExtra("desc", article.getDescription());
+                versDA.putExtra("image", (Serializable) article.getImage());
                 startActivity(versDA);
             }
         });

@@ -4,35 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="center"
     tools:context=".ActivityDetailArticle">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/DA_imgArticle"
+        android:layout_width="197dp"
+        android:layout_height="198dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="98dp"
+        android:contentDescription="@string/DA_DescriptionImage"
+        android:src="@tools:sample/avatars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DA_PrixArticle"
+        android:layout_width="92dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="75dp"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/DA_nomArticle"
+        app:layout_constraintTop_toBottomOf="@+id/DA_imgArticle" />
+
+    <TextView
+        android:id="@+id/DA_nomArticle"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="64dp"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DA_imgArticle" />
+
+    <TextView
+        android:id="@+id/DA_DescArticle"
+        android:layout_width="373dp"
+        android:layout_height="146dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="16dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/DA_imgArticle" />
 
-        <TextView
-            android:id="@+id/DA_nomArticle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50sp"
-            android:text="test"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/DA_nbAjouter"
+        android:layout_width="65dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints="1"
+        android:ems="10"
+        android:hint="@string/DA_PlaceholderNbArticle"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/DA_btnMoins1"
+        app:layout_constraintTop_toBottomOf="@+id/DA_DescArticle" />
 
-        <TextView
-            android:id="@+id/DA_PrixArticle"
-            android:layout_width="36dp"
-            android:layout_height="27dp"
-            android:text="test" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/DA_btnPlus1"
+        android:layout_width="59dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="54dp"
+        android:text="@string/DA_AjouterUnArticle"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/DA_nbAjouter"
+        app:layout_constraintTop_toBottomOf="@+id/DA_DescArticle" />
+
+    <Button
+        android:id="@+id/DA_btnMoins1"
+        android:layout_width="59dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/DA_RetirerUnArticle"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/DA_nbAjouter"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DA_DescArticle" />
+
+    <Button
+        android:id="@+id/DA_btnAjouterPanier"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/DA_AjouterAuPanier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DA_nbAjouter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
