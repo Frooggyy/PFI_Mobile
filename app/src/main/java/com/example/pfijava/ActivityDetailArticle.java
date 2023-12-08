@@ -25,9 +25,9 @@ public class ActivityDetailArticle extends AppCompatActivity {
         //Prendre tous Extras
         Intent i = getIntent();
         String nom = i.getStringExtra("nom");
-        String prix = i.getStringExtra("prix");
+        double prix = i.getDoubleExtra("prix",0);
         String desc = i.getStringExtra("desc");
-        Drawable img = (Drawable) i.getSerializableExtra("image");
+        int img = i.getIntExtra("image", 0);
 
         //Trouver tous les Views du layout
         TextView txtNom = findViewById(R.id.DA_nomArticle);
@@ -37,9 +37,9 @@ public class ActivityDetailArticle extends AppCompatActivity {
 
         //Mettre le texte et les images dans les views
         txtNom.setText(nom);
-        txtPrix.setText(prix);
+        txtPrix.setText(String.valueOf(prix));
         txtDesc.setText(desc);
-        imgArticle.setImageDrawable(img);
+        imgArticle.setImageResource(img);
 
         //Faire les OnClickListener des boutons dans Details Articles
         Button btnAjouter1 = findViewById(R.id.DA_btnPlus1);
@@ -50,20 +50,30 @@ public class ActivityDetailArticle extends AppCompatActivity {
         btnAjouter1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int nbArticles = parseInt(nbAjouter.getText().toString());
+                String test = nbAjouter.getText().toString();
+                int nbArticles;
+                if(test.equals("")){
+                    nbArticles = 0;
+                }else{
+                   nbArticles = parseInt(nbAjouter.getText().toString());
+                }
+
+
                 nbArticles++;
-                nbAjouter.setText(nbArticles);
+                nbAjouter.setText(String.valueOf(nbArticles));
             }
         });
         btnRetirer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int nbArticles = parseInt(nbAjouter.getText().toString());
-                if(nbArticles-1 > 0){
+                if(nbArticles-1 >= 0){
                     nbArticles--;
                 }
-                nbAjouter.setText(nbArticles);
+                nbAjouter.setText(String.valueOf(nbArticles));
             }
         });
+
+        btnAjouterPanier.setOnClickListener();
     }
 }
