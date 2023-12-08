@@ -6,15 +6,15 @@ import android.widget.ImageView;
 public class Article {
     private String nom;
     private double prix;
-    private Drawable image;
+    private int idImage;
     private String description;
 
-    public Drawable getImage() {
-        return image;
+    public int getIdImage() {
+        return idImage;
     }
 
-    public void setImage(Drawable image) {
-        this.image = image;
+    public void setImage(int image) {
+        this.idImage = image;
     }
 
     public String getNom(){
@@ -41,10 +41,10 @@ public class Article {
         this.description = description;
     }
 
-    public Article(String nom, double prix, Drawable image, String description) {
+    public Article(String nom, double prix, int idImage, String description) {
         this.nom = nom;
         this.prix = prix;
-        this.image = image;
+        this.idImage = idImage;
         this.description = description;
     }
 }
