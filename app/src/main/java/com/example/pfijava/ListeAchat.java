@@ -7,18 +7,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ListeAchat extends AppCompatActivity {
     private Panier panier;
     private PanierAdapter adaptateur;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +43,18 @@ public class ListeAchat extends AppCompatActivity {
         Button btnVersListe = (Button) findViewById(R.id.achat_btnVersListe);
         Button btnAnnuler = (Button) findViewById(R.id.achat_btnViderPanier);
         Button btnValider = (Button) findViewById(R.id.achat_btnAchatPanier);
+
+        VideoView vid = findViewById(R.id.achat_videoView);
+
+        //Mettre video dans la page du panier
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(vid);
+
+        Uri uriVid = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.panier);
+        vid.setMediaController(mediaController);
+        vid.setVideoURI(uriVid);
+        vid.requestFocus();
+        vid.start();
 
         MettreAJourTotal();
 
@@ -67,7 +83,23 @@ public class ListeAchat extends AppCompatActivity {
                 panier.viderPanier();
                 adaptateur.clearList();
 
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        MediaPlayer mp;
+                        mp = MediaPlayer.create(ListeAchat.this, Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.kaching));
+
+                        mp.start();
+                        while(mp.isPlaying()){}
+                        mp.stop();
+                        mp.release();
+                        mp = null;
+                    }
+                }).start();
+
+
                 Intent versAchatValider = new Intent(ListeAchat.this, AchatValider.class);
+                vid.stopPlayback();
                 startActivity(versAchatValider);
             }
         });
@@ -86,4 +118,5 @@ public class ListeAchat extends AppCompatActivity {
         String totalArrondi = String.format("%.2f", total);
         totalPrix.setText(totalArrondi + " $");
     }
+
 }
