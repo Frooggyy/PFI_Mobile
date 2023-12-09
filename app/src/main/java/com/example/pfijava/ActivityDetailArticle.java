@@ -45,14 +45,15 @@ public class ActivityDetailArticle extends AppCompatActivity {
         Button btnAjouter1 = findViewById(R.id.DA_btnPlus1);
         Button btnRetirer1 = findViewById(R.id.DA_btnMoins1);
         Button btnAjouterPanier = findViewById(R.id.DA_btnAjouterPanier);
+        Button btnRetour = findViewById(R.id.DA_btnRetour);
         EditText nbAjouter = findViewById(R.id.DA_nbAjouter);
+
 
         btnAjouter1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String test = nbAjouter.getText().toString();
                 int nbArticles;
-                if(test.equals("")){
+                if(nbAjouter.getText().toString().equals("")){
                     nbArticles = 0;
                 }else{
                    nbArticles = parseInt(nbAjouter.getText().toString());
@@ -74,6 +75,29 @@ public class ActivityDetailArticle extends AppCompatActivity {
             }
         });
 
-        btnAjouterPanier.setOnClickListener();
+        btnAjouterPanier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Panier panier = Panier.getInstance();
+                int nbArticles;
+                if(nbAjouter.getText().toString().equals("")){
+                    nbArticles = 0;
+                }else{
+                    nbArticles = parseInt(nbAjouter.getText().toString());
+                    for(int i=1; i<= nbArticles;i++){
+                        panier.ajouterArticle(nom, prix);
+                    }
+                }
+
+            }
+        });
+
+        btnRetour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent versListe = new Intent(ActivityDetailArticle.this, ListeEpicerie.class);
+                startActivity(versListe);
+            }
+        });
     }
 }
