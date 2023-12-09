@@ -88,6 +88,7 @@ public class ActivityDetailArticle extends AppCompatActivity {
                         panier.ajouterArticle(nom, prix);
                     }
                 }
+                nbAjouter.setText("0");
 
             }
         });
