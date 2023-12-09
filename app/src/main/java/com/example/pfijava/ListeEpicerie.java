@@ -16,14 +16,13 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class ListeEpicerie extends AppCompatActivity implements Serializable {
-    private Panier panier;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_epicerie);
 
-        panier = Panier.getInstance();
 
         ArrayList<Article> arrArticle = new ArrayList<Article>();
         RecyclerView recycleArticle = (RecyclerView) findViewById(R.id.LE_RecyclerView);
@@ -52,12 +51,6 @@ public class ListeEpicerie extends AppCompatActivity implements Serializable {
 
         Button btnVersPanier = (Button) findViewById(R.id.LE_btnVersPanier);
 
-//        ////// Pour test on fera mieux plustard
-        panier.ajouterArticle(arrArticle.get(0).getNom(),arrArticle.get(0).getPrix());
-        panier.ajouterArticle(arrArticle.get(1).getNom(),arrArticle.get(1).getPrix());
-        panier.ajouterArticle(arrArticle.get(1).getNom(),arrArticle.get(1).getPrix());
-        panier.ajouterArticle(arrArticle.get(2).getNom(),arrArticle.get(2).getPrix());
-//        //////
 
 
         btnVersPanier.setOnClickListener(new View.OnClickListener() {
