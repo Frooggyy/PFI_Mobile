@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,11 +19,25 @@ import java.util.Objects;
 
 public class ListeEpicerie extends AppCompatActivity implements Serializable {
 
-
+    MediaPlayer musique;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_epicerie);
+        musique = MediaPlayer.create(ListeEpicerie.this, Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.musique));
+        Boolean musiqueFini = false;
+        if(!musique.isPlaying()){
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    musique.start();
+                    while(!musiqueFini){}
+                    musique.stop();
+                    musique.release();
+                    musique = null;
+                }
+            }).start();
+        }
 
 
         ArrayList<Article> arrArticle = new ArrayList<Article>();
