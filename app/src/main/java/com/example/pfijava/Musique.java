@@ -9,14 +9,44 @@ import android.net.Uri;
 public class Musique {
     private static Musique musiqueInstance;
     private MediaPlayer mediaPlayer;
+    private Boolean isPlaying = false;
 
 
-    public Musique(Context context, Uri uri) {
-        mediaPlayer.create(context, uri);
+    private Musique(Context context, Uri uri) {
+        mediaPlayer = MediaPlayer.create(context, uri);
 
     }
 
-    public static Musique getInstance() {
-        return musiqueInstance;
+    public static Musique getInstance(Context context) {
+        if(musiqueInstance != null)
+            return musiqueInstance;
+        else{
+            musiqueInstance = new Musique(context, Uri.parse("android.resource://com.example.pfijava/"+R.raw.musique));
+            return musiqueInstance;
+        }
+    }
+
+    public  void jouer(){
+        mediaPlayer.start();
+        isPlaying = true;
+    }
+
+    public void pause(){
+        mediaPlayer.pause();
+        isPlaying = false;
+    }
+
+    public void stop(){
+        mediaPlayer.stop();
+    }
+
+    public void detruire(){
+        mediaPlayer.pause();
+        mediaPlayer.stop();
+        mediaPlayer.release();
+        mediaPlayer = null;
+    }
+    public Boolean isPlaying(){
+        return isPlaying;
     }
 }

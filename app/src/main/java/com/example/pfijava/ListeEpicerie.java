@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -13,32 +14,40 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class ListeEpicerie extends AppCompatActivity implements Serializable {
-
-    MediaPlayer musique;
+public class ListeEpicerie extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_epicerie);
-        musique = MediaPlayer.create(ListeEpicerie.this, Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.musique));
-        Boolean musiqueFini = false;
+
+        Musique musique = Musique.getInstance(this);
+
         if(!musique.isPlaying()){
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    musique.start();
-                    while(!musiqueFini){}
-                    musique.stop();
-                    musique.release();
-                    musique = null;
-                }
-            }).start();
+            musique.jouer();
         }
 
+
+
+        FloatingActionButton btn_playPause = findViewById(R.id.btn_musiquePlayPause);
+        btn_playPause.setForeground(getDrawable(R.drawable.pause));
+        btn_playPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(musique.isPlaying()){
+                    musique.pause();
+                    btn_playPause.setForeground(getDrawable(R.drawable.play));
+                }else{
+                    musique.jouer();
+                    btn_playPause.setForeground(getDrawable(R.drawable.pause));
+                }
+            }
+        });
 
         ArrayList<Article> arrArticle = new ArrayList<Article>();
         RecyclerView recycleArticle = (RecyclerView) findViewById(R.id.LE_RecyclerView);

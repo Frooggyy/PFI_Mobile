@@ -2,48 +2,48 @@
 
     <string name="app_name">PFIJava</string>
     -- Page de bienvenue
-    <string name="AM_Bienvenue">MARCHER.online</string>
-    <string name="AM_PlaceholderNom">Nom</string>
-    <string name="AM_PlaceholderPass">Mot de passe</string>
-    <string name="AM_BtnLogin">Se Connecter</string>
-    <string name="errorLogin">"Le nom d'utilisateur ou le mot de passe est invalide. Veuiller recommencer."</string>
-    <string name="achatTitre">"Panier"</string>
+    <string name="AM_Bienvenue">MARKET.online</string>
+    <string name="AM_PlaceholderNom">Name</string>
+    <string name="AM_PlaceholderPass">Password</string>
+    <string name="AM_BtnLogin">Login</string>
+    <string name="errorLogin">"The username or the password is incorrect. Try again"</string>
+    <string name="achatTitre">"Cart"</string>
 
     -- Panier
-    <string name="achat_txtPrixTotal">Prix Total</string>
-    <string name="achat_btnViderPanier">Annuler</string>
-    <string name="achat_btnAchatPanier">Paiement</string>
-    <string name="poursuivre_achats">Poursuivre Mes Achats</string>
-    <string name="voirPanier">Voir Panier</string>
+    <string name="achat_txtPrixTotal">Total price</string>
+    <string name="achat_btnViderPanier">Cancel</string>
+    <string name="achat_btnAchatPanier">Payment</string>
+    <string name="poursuivre_achats">Continue shopping</string>
+    <string name="voirPanier">See cart</string>
 
-    <string name="VA_titre">Votre Commande</string>
-    <string name="VA_btnRetour">Retour au marché</string>
-    <string name="Com_txtConfirmation">Merci pour votre achat !</string>
+    <string name="VA_titre">Your order</string>
+    <string name="VA_btnRetour">Return to the market</string>
+    <string name="Com_txtConfirmation">Thank you for your purchase!</string>
 
 
     -- Page Description Articles
     <string name="DA_PlaceholderNbArticle">1</string>
     <string name="DA_AjouterUnArticle">+</string>
     <string name="DA_RetirerUnArticle">-</string>
-    <string name="DA_AjouterAuPanier">Ajouter au panier</string>
-    <string name="DA_DescriptionImage">Image de l\'article</string>
-    <string name="DA_Retour">Retour</string>
+    <string name="DA_AjouterAuPanier">Add to cart</string>
+    <string name="DA_DescriptionImage">Image of the product</string>
+    <string name="DA_Retour">Return</string>
 
-    --Description des viws
-    <string name="LE_descBtnPlayPause">Bouton qui fait jouer ou pause la musique</string>
+    --Description des views
+    <string name="LE_descBtnPlayPause">Button that plays or pauses the music</string>
 
     -- Description des articles
-    <string name="articleDesc_banane">Banane</string>
-    <string name="articleDesc_cerise">cerise</string>
-    <string name="articleDesc_chou">articleDesc_chou</string>
-    <string name="articleDesc_champignon">articleDesc_champignon</string>
-    <string name="articleDesc_courgette">articleDesc_courgette</string>
-    <string name="articleDesc_epinard">articleDesc_epinard</string>
-    <string name="articleDesc_mais">articleDesc_mais</string>
-    <string name="articleDesc_orange">articleDesc_orange</string>
-    <string name="articleDesc_pois">articleDesc_pois</string>
-    <string name="articleDesc_raisin">articleDesc_raisin</string>
-    <string name="title_activity_panier">Panier</string>
+    <string name="articleDesc_banane">Banana</string>
+    <string name="articleDesc_cerise">Cherry</string>
+    <string name="articleDesc_chou">Lettuce</string>
+    <string name="articleDesc_champignon">Mushroom</string>
+    <string name="articleDesc_courgette">Eggplant</string>
+    <string name="articleDesc_epinard">Spinach</string>
+    <string name="articleDesc_mais">Corn</string>
+    <string name="articleDesc_orange">orange</string>
+    <string name="articleDesc_pois">Peas</string>
+    <string name="articleDesc_raisin">Grapes</string>
+    <string name="title_activity_panier">Cart</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
