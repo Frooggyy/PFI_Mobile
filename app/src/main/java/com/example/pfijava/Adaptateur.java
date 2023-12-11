@@ -19,6 +19,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+/**
+ * Auteur: Gabriel
+ * FONCTIONNEMENT DU ONCLICKLISTENER DANS CHAQUE ARTICLE PRIS EN LIGNE À
+ * https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
+ * Cette classe permet au recyclerView de contenir de différentes lignes
+ * qui contienne chacune un article
+ */
+
+
 public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
     Context context;

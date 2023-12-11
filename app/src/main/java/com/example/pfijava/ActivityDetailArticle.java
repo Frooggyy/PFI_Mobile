@@ -16,6 +16,17 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+/**
+ * Auteur:Gabriel
+ * Cette classe est liée au layout activity_detail_article
+ * Lorsque l'utilisateur clique sur un article dans la page précédante,
+ * il sera redirigé ici
+ * Cette activité montre une image de l'article ainsi que son nom, son prix et sa description
+ * et permet d'ajouter un certain nombre d'articles dans le panier de l'utilisateur
+ * ce nombre est spécifié par l'utilisateur grâce à un EditText(Number) avec des boutons
+ * qui incrémentent cette valeur de +1 ou -1
+ *
+ */
 public class ActivityDetailArticle extends AppCompatActivity {
     private Panier panier;
     int quantite = 0;
@@ -49,7 +60,7 @@ public class ActivityDetailArticle extends AppCompatActivity {
         Button btnRetirer1 = findViewById(R.id.DA_btnMoins1);
         Button btnAjouterPanier = findViewById(R.id.DA_btnAjouterPanier);
 
-        Button btnAnnuler = findViewById(R.id.btn_annuler);
+        Button btnRetour = findViewById(R.id.DA_btnRetour);
         EditText nbAjouter = findViewById(R.id.DA_nbAjouter);
 
         btnAjouter1.setOnClickListener(new View.OnClickListener() {
@@ -93,33 +104,13 @@ public class ActivityDetailArticle extends AppCompatActivity {
             }
         });
 
-//         btnAnnuler.setOnClickListener(new View.OnClickListener() {
-//             @Override
-//             public void onClick(View v) {
-//                 Intent versLE = new Intent(ActivityDetailArticle.this, ListeEpicerie.class);
-//                 startActivity(versLE);
-// =======
-//                 Panier panier = Panier.getInstance();
-//                 int nbArticles;
-//                 if(nbAjouter.getText().toString().equals("")){
-//                     nbArticles = 0;
-//                 }else{
-//                     nbArticles = parseInt(nbAjouter.getText().toString());
-//                     for(int i=1; i<= nbArticles;i++){
-//                         panier.ajouterArticle(nom, prix);
-//                     }
-//                 }
-//                 nbAjouter.setText("0");
-//             }
-//         });
 
         btnRetour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent versListe = new Intent(ActivityDetailArticle.this, ListeEpicerie.class);
-                startActivity(versListe);
-
-            }
+           @Override
+          public void onClick(View v) {
+               Intent versListe = new Intent(ActivityDetailArticle.this, ListeEpicerie.class);
+               startActivity(versListe);
+           }
         });
     }
 
