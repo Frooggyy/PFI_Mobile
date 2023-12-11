@@ -42,16 +42,16 @@
     <string name="LE_descBtnPlayPause">Bouton qui fait jouer ou pause la musique</string>
 
     -- Description des articles
-    <string name="articleDesc_banane">Banane</string>
-    <string name="articleDesc_cerise">cerise</string>
-    <string name="articleDesc_chou">articleDesc_chou</string>
-    <string name="articleDesc_champignon">articleDesc_champignon</string>
-    <string name="articleDesc_courgette">articleDesc_courgette</string>
-    <string name="articleDesc_epinard">articleDesc_epinard</string>
-    <string name="articleDesc_mais">articleDesc_mais</string>
-    <string name="articleDesc_orange">articleDesc_orange</string>
-    <string name="articleDesc_pois">articleDesc_pois</string>
-    <string name="articleDesc_raisin">articleDesc_raisin</string>
+    <string name="articleDesc_banane">\"Des bananes jaunes et sucrées, riches en potassium et parfaites comme collation saine\" (Lieu: Equateur, Ferme: Tropicale Delicioso)\"</string>
+    <string name="articleDesc_cerise">\"Des cerises rouges juteuses, idéales pour les desserts ou simplement à déguster telles quelles\" (Lieu: France, Ferme: Rouge Sucré)\"</string>
+    <string name="articleDesc_chou">\"Un chou vert et croquant, parfait pour les salades ou les plats sautés\" (Lieu: Canada, Ferme: Croquante Canadienne)\"</string>
+    <string name="articleDesc_champignon">\"Des champignons frais et savoureux, parfaits pour ajouter de la saveur à de nombreux plats\" (Lieu: USA, Ferme: ChampiFrais)\"</string>
+    <string name="articleDesc_courgette">\"Des courgettes vertes et croquantes, parfaites pour les plats grillés ou en sauté\" (Lieu: Espagne, Ferme: Verte Espagnole)\"</string>
+    <string name="articleDesc_epinard">\"Des épinards verts riches en fer, parfaits pour les smoothies ou en accompagnement\" (Lieu: France, Ferme: Feuille Verte Française)\"</string>
+    <string name="articleDesc_mais">\"Des épis de maïs jaunes et sucrés, parfaits pour les grillades d\'été ou comme accompagnement\" (Lieu: USA, Ferme: Dorée Américaine)\"</string>
+    <string name="articleDesc_orange">\"Des oranges juteuses pleines de vitamine C, parfaites pour les jus ou à déguster en fruit\" (Lieu: Espagne, Ferme: Jus d\'Orange Espagnole)\"</string>
+    <string name="articleDesc_pois">\"Des pois verts et sucrés, parfaits pour accompagner de nombreux plats ou en salade\" (Lieu: France, Ferme: Petit Pois Français)\"</string>
+    <string name="articleDesc_raisin">\"Des raisins juteux, parfaits pour les collations ou à ajouter dans les salades de fruits\" (Lieu: Italie, Ferme: Raisin Sucré Italien)\"</string>
     <string name="title_activity_panier">Panier</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
