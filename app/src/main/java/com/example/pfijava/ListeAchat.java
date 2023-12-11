@@ -17,7 +17,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.TextView;
+
+import android.widget.Toast;
+
 import android.widget.VideoView;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -100,7 +104,6 @@ public class ListeAchat extends AppCompatActivity {
             public void onClick(View v) {
                 panier.viderPanier();
                 adaptateur.clearList();
-
                 Intent versLE = new Intent(ListeAchat.this, ListeEpicerie.class);
                 startActivity(versLE);
             }
@@ -109,8 +112,16 @@ public class ListeAchat extends AppCompatActivity {
         btnValider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                panier.viderPanier();
-                adaptateur.clearList();
+
+
+//                 if(panier.ArticleDansPanier()){
+//                     panier.viderPanier();
+//                     adaptateur.clearList();
+//                     Intent versAchatValider = new Intent(ListeAchat.this, AchatValider.class);
+//                     startActivity(versAchatValider);
+//                 } else {
+//                     Toast.makeText(ListeAchat.this, getResources().getString(R.string.PA_toast_paniervide), Toast.LENGTH_SHORT).show();
+//                 }
 
                 new Thread(new Runnable() {
                     @Override
@@ -128,12 +139,11 @@ public class ListeAchat extends AppCompatActivity {
 
                 }).start();
 
-
-
                 Intent versAchatValider = new Intent(ListeAchat.this, AchatValider.class);
                 vid.stopPlayback();
                 stopAnimation = true;
                 startActivity(versAchatValider);
+
             }
         });
     }

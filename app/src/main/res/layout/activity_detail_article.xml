@@ -8,13 +8,17 @@
     tools:context=".ActivityDetailArticle">
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+        android:id="@+id/DA_imgBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background" />
 
     <ImageView
@@ -59,7 +63,7 @@
         android:layout_width="373dp"
         android:layout_height="146dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="16dp"
         android:background="#C1F6F4F4"
         android:textSize="24sp"
@@ -73,7 +77,7 @@
         android:layout_width="65dp"
         android:layout_height="68dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:autofillHints="1"
         android:ems="10"
         android:hint="@string/DA_PlaceholderNbArticle"
@@ -83,25 +87,11 @@
         app:layout_constraintTop_toBottomOf="@+id/DA_DescArticle" />
 
     <Button
-        android:id="@+id/DA_btnPlus1"
-        android:layout_width="59dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="54dp"
-        android:text="@string/DA_AjouterUnArticle"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/DA_nbAjouter"
-        app:layout_constraintTop_toBottomOf="@+id/DA_DescArticle" />
-
-    <Button
         android:id="@+id/DA_btnMoins1"
         android:layout_width="59dp"
         android:layout_height="65dp"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="60dp"
         android:text="@string/DA_RetirerUnArticle"
         android:textSize="30sp"
@@ -115,7 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="@string/DA_AjouterAuPanier"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,16 +114,32 @@
         app:layout_constraintTop_toBottomOf="@+id/DA_nbAjouter" />
 
     <Button
-        android:id="@+id/DA_btnRetour"
+
+        android:id="@+id/DA_btnPlus1"
+        android:layout_width="59dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="54dp"
+        android:text="@string/DA_AjouterUnArticle"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/DA_nbAjouter"
+        app:layout_constraintTop_toBottomOf="@+id/DA_DescArticle" />
+
+    <Button
+        android:id="@+id/btn_annuler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/DA_Retour"
+        android:text="@string/DA_Btn_annuler"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DA_btnAjouterPanier" />
+        app:layout_constraintTop_toBottomOf="@+id/DA_btnAjouterPanier"
+        app:layout_constraintVertical_bias="0.184" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
