@@ -72,7 +72,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         holder.btnAjt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Panier.getInstance().ajouterArticle(nomArticle, prixArticle);
+                Panier.getInstance().ajouterArticle(nomArticle, 1, prixArticle);
                 notifyDataSetChanged();
                 listeAchat.MettreAJourTotal();
             }
@@ -81,13 +81,9 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         holder.btnRetrait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Panier.getInstance().retirerArticle(nomArticle, 1);
 
-                Panier.getInstance().retirerArticle(nomArticle);
-
-                int newQuantite = panier.getQuantiteArticle(nomArticle);
-
-                if (newQuantite == 0) {
-                    panier.retirerArticle(nomArticle);
+                if (!Panier.getInstance().ArticleDansPanier(nomArticle)) {
                     ListArticles.remove(holder.getAdapterPosition());
                     notifyDataSetChanged();
                 } else {

@@ -12,15 +12,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 public class ActivityDetailArticle extends AppCompatActivity {
-
+    private Panier panier;
+    int quantite = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_article);
+        panier = Panier.getInstance();
 
         //Prendre tous Extras
         Intent i = getIntent();
@@ -45,7 +48,10 @@ public class ActivityDetailArticle extends AppCompatActivity {
         Button btnAjouter1 = findViewById(R.id.DA_btnPlus1);
         Button btnRetirer1 = findViewById(R.id.DA_btnMoins1);
         Button btnAjouterPanier = findViewById(R.id.DA_btnAjouterPanier);
+        Button btnAnnuler = findViewById(R.id.btn_annuler);
         EditText nbAjouter = findViewById(R.id.DA_nbAjouter);
+
+
 
         btnAjouter1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,9 +63,8 @@ public class ActivityDetailArticle extends AppCompatActivity {
                 }else{
                    nbArticles = parseInt(nbAjouter.getText().toString());
                 }
-
-
                 nbArticles++;
+                quantite = nbArticles;
                 nbAjouter.setText(String.valueOf(nbArticles));
             }
         });
@@ -70,10 +75,33 @@ public class ActivityDetailArticle extends AppCompatActivity {
                 if(nbArticles-1 >= 0){
                     nbArticles--;
                 }
+                quantite = nbArticles;
                 nbAjouter.setText(String.valueOf(nbArticles));
             }
         });
 
-        btnAjouterPanier.setOnClickListener();
+        btnAjouterPanier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(quantite > 0){
+                    panier.ajouterArticle(nom, quantite, prix);
+                    Intent versLE = new Intent(ActivityDetailArticle.this, ListeEpicerie.class);
+                    startActivity(versLE);
+                } else {
+                    Toast.makeText(ActivityDetailArticle.this, getResources().getString(R.string.DA_Toast_quantite), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnAnnuler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent versLE = new Intent(ActivityDetailArticle.this, ListeEpicerie.class);
+                startActivity(versLE);
+            }
+        });
     }
+
+
 }

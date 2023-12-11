@@ -13,7 +13,6 @@ import android.widget.Button;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ListeEpicerie extends AppCompatActivity implements Serializable {
     private Panier panier;
@@ -53,10 +52,10 @@ public class ListeEpicerie extends AppCompatActivity implements Serializable {
         Button btnVersPanier = (Button) findViewById(R.id.LE_btnVersPanier);
 
 //        ////// Pour test on fera mieux plustard
-        panier.ajouterArticle(arrArticle.get(0).getNom(),arrArticle.get(0).getPrix());
-        panier.ajouterArticle(arrArticle.get(1).getNom(),arrArticle.get(1).getPrix());
-        panier.ajouterArticle(arrArticle.get(1).getNom(),arrArticle.get(1).getPrix());
-        panier.ajouterArticle(arrArticle.get(2).getNom(),arrArticle.get(2).getPrix());
+//        panier.ajouterArticle(arrArticle.get(0).getNom(),1,arrArticle.get(0).getPrix());
+//        panier.ajouterArticle(arrArticle.get(1).getNom(),99,arrArticle.get(1).getPrix());
+//        panier.ajouterArticle(arrArticle.get(1).getNom(),1,arrArticle.get(1).getPrix());
+//        panier.ajouterArticle(arrArticle.get(2).getNom(),1, arrArticle.get(2).getPrix());
 //        //////
 
 
@@ -73,10 +72,8 @@ public class ListeEpicerie extends AppCompatActivity implements Serializable {
         listeArticles.add(new Article("banane",1.02,R.drawable.banane, getResources().getString(R.string.articleDesc_banane)));
         listeArticles.add(new Article("cerise",4.99,R.drawable.cerise, getResources().getString(R.string.articleDesc_cerise)));
         listeArticles.add(new Article("chou",2.48,R.drawable.chou, getResources().getString(R.string.articleDesc_chou)));
-        listeArticles.add(new Article("Champignon",2.48,R.drawable.champignon, getResources().getString(R.string.articleDesc_champignon)));
+        listeArticles.add(new Article("champignon",2.48,R.drawable.champignon, getResources().getString(R.string.articleDesc_champignon)));
         listeArticles.add(new Article("courgette",1.50,R.drawable.courgette, getResources().getString(R.string.articleDesc_courgette)));
-        listeArticles.add(new Article("épinard",3.99,R.drawable.epinard, getResources().getString(R.string.articleDesc_epinard)));
-        listeArticles.add(new Article("Maïs",5.60,R.drawable.mais, getResources().getString(R.string.articleDesc_mais)));
         listeArticles.add(new Article("orange",0.99,R.drawable.orange, getResources().getString(R.string.articleDesc_orange)));
         listeArticles.add(new Article("pois",2.99,R.drawable.pois, getResources().getString(R.string.articleDesc_pois)));
         listeArticles.add(new Article("raisin",3.50,R.drawable.raisin, getResources().getString(R.string.articleDesc_raisin)));

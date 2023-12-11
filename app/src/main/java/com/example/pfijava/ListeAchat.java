@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -55,8 +56,6 @@ public class ListeAchat extends AppCompatActivity {
             public void onClick(View v) {
                 panier.viderPanier();
                 adaptateur.clearList();
-//                MettreAJourTotal();
-
                 Intent versLE = new Intent(ListeAchat.this, ListeEpicerie.class);
                 startActivity(versLE);
             }
@@ -65,11 +64,15 @@ public class ListeAchat extends AppCompatActivity {
         btnValider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                panier.viderPanier();
-                adaptateur.clearList();
 
-                Intent versAchatValider = new Intent(ListeAchat.this, AchatValider.class);
-                startActivity(versAchatValider);
+                if(panier.ArticleDansPanier()){
+                    panier.viderPanier();
+                    adaptateur.clearList();
+                    Intent versAchatValider = new Intent(ListeAchat.this, AchatValider.class);
+                    startActivity(versAchatValider);
+                } else {
+                    Toast.makeText(ListeAchat.this, getResources().getString(R.string.PA_toast_paniervide), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
