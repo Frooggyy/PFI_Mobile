@@ -16,6 +16,17 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+/**
+ * Auteur:Gabriel
+ * Cette classe est liée au layout activity_detail_article
+ * Lorsque l'utilisateur clique sur un article dans la page précédante,
+ * il sera redirigé ici
+ * Cette activité montre une image de l'article ainsi que son nom, son prix et sa description
+ * et permet d'ajouter un certain nombre d'articles dans le panier de l'utilisateur
+ * ce nombre est spécifié par l'utilisateur grâce à un EditText(Number) avec des boutons
+ * qui incrémentent cette valeur de +1 ou -1
+ *
+ */
 public class ActivityDetailArticle extends AppCompatActivity {
     private Panier panier;
     int quantite = 0;
