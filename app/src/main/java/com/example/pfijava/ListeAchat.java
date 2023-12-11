@@ -12,6 +12,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -23,6 +25,7 @@ import java.util.ArrayList;
 public class ListeAchat extends AppCompatActivity {
     private Panier panier;
     private PanierAdapter adaptateur;
+    private Boolean stopAnimation = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +58,34 @@ public class ListeAchat extends AppCompatActivity {
         vid.setVideoURI(uriVid);
         vid.requestFocus();
         vid.start();
+        //Pour loop la vidéo
+        vid.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                vid.start();
+            }
+        });
 
         MettreAJourTotal();
+
+        Animation animation = AnimationUtils.loadAnimation(ListeAchat.this, R.anim.rotate);
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+
+                try {
+                    while(!stopAnimation){
+                        btnValider.startAnimation(animation);
+                        while(!animation.hasEnded()){}
+                        Thread.sleep(2000);
+                    }
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+        }).start();
 
         btnVersListe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,12 +123,16 @@ public class ListeAchat extends AppCompatActivity {
                         mp.stop();
                         mp.release();
                         mp = null;
+
                     }
+
                 }).start();
+
 
 
                 Intent versAchatValider = new Intent(ListeAchat.this, AchatValider.class);
                 vid.stopPlayback();
+                stopAnimation = true;
                 startActivity(versAchatValider);
             }
         });

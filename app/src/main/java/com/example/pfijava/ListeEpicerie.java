@@ -30,6 +30,7 @@ public class ListeEpicerie extends AppCompatActivity {
 
         if(!musique.isPlaying()){
             musique.jouer();
+
         }
 
 
