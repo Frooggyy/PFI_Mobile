@@ -8,6 +8,7 @@
     tools:context=".ListeEpicerie">
 
     <ImageView
+
         android:id="@+id/achat_imgBackground2"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -30,6 +31,24 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="342dp"
+        android:layout_height="421dp"
+        android:layout_marginTop="88dp"
+        android:background="#C1F6F4F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -59,6 +78,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+
+              
             </androidx.recyclerview.widget.RecyclerView>
         </ScrollView>
 
@@ -69,5 +90,34 @@
             android:layout_marginTop="40dp"
             android:text="@string/voirPanier" />
     </LinearLayout>
+
+      
+    <Button
+        android:id="@+id/LE_btnVersPanier"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/voirPanier"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_musiquePlayPause"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="357dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/LE_descBtnPlayPause"
+        android:foreground="@drawable/play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      
 
 </androidx.constraintlayout.widget.ConstraintLayout>

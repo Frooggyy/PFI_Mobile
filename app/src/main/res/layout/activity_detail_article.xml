@@ -8,6 +8,7 @@
     tools:context=".ActivityDetailArticle">
 
     <ImageView
+
         android:id="@+id/DA_imgBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -22,11 +23,12 @@
 
     <ImageView
         android:id="@+id/DA_imgArticle"
-        android:layout_width="356dp"
+        android:layout_width="160dp"
         android:layout_height="167dp"
         android:layout_marginStart="89dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="98dp"
+        android:background="#C1F6F4F4"
         android:contentDescription="@string/DA_DescriptionImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,6 +65,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="120dp"
         android:layout_marginEnd="16dp"
+        android:background="#C1F6F4F4"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -111,6 +114,7 @@
         app:layout_constraintTop_toBottomOf="@+id/DA_nbAjouter" />
 
     <Button
+
         android:id="@+id/DA_btnPlus1"
         android:layout_width="59dp"
         android:layout_height="65dp"

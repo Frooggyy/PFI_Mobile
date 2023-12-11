@@ -1,13 +1,16 @@
 package com.example.pfijava;
 
 import android.content.Context;
+
 import android.media.MediaPlayer;
+
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -59,6 +62,9 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         holder.Qty.setText(String.valueOf(quantite));
         holder.Prix.setText(totalArrondi + " $");
 
+
+
+
         int imgID = context.getResources().getIdentifier(nomArticle, "drawable", context.getPackageName());
 
         if (imgID != 0) {
@@ -107,6 +113,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         TextView Prix;
         TextView PrixTotal;
         ImageView img;
+
         Button btnAjt;
         Button btnRetrait;
 
@@ -120,6 +127,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
             btnAjt = itemView.findViewById(R.id.btnAjt);
             btnRetrait = itemView.findViewById(R.id.btnRetrait);
             PrixTotal = itemView.findViewById(R.id.achat_txtCalculTotal);
+
         }
     }
 

@@ -6,6 +6,7 @@ import android.widget.ImageView;
 public class Article {
     private String nom;
     private double prix;
+    private String stringPrix = String.valueOf(prix);
     private int idImage;
     private String description;
 
@@ -28,6 +29,7 @@ public class Article {
     public double getPrix(){
         return prix;
     }
+
 
     public void setPrix(double value){
         prix = value;

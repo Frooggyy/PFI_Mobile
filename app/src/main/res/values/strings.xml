@@ -31,10 +31,15 @@
     <string name="DA_RetirerUnArticle">-</string>
     <string name="DA_AjouterAuPanier">Ajouter au panier</string>
     <string name="DA_DescriptionImage">Image de l\'article</string>
+
     <string name="DA_Btn_annuler">Annuler</string>
     <string name="DA_Toast_quantite">Veuillez saisir une quantité pour pursuivre</string>
 
+    <string name="DA_Retour">Retour</string>
 
+
+    --Description des viws
+    <string name="LE_descBtnPlayPause">Bouton qui fait jouer ou pause la musique</string>
 
     -- Description des articles
     <string name="articleDesc_banane">Banane</string>
