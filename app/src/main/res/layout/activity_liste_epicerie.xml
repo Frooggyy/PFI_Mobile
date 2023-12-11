@@ -19,12 +19,12 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="342dp"
-        android:layout_height="421dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="386dp"
+        android:layout_height="508dp"
+        android:layout_marginTop="96dp"
         android:background="#C1F6F4F4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

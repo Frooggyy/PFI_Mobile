@@ -12,8 +12,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.VideoView;
 
+/**
+ * Auteur : Kéven
+ * Cette classe est liée au layout activity_achat_valider et permet sa gestion
+ */
 public class AchatValider extends AppCompatActivity {
-    private Panier panier;
     VideoView videoView;
     boolean executeThread;
     boolean fini = false;
@@ -22,7 +25,6 @@ public class AchatValider extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achat_valider);
-//        panier = Panier.getInstance();
 
         Button btnRetour = (Button) findViewById(R.id.btn_retour);
         Animation fadein = AnimationUtils.loadAnimation(AchatValider.this, R.anim.fadein);
@@ -44,6 +46,7 @@ public class AchatValider extends AppCompatActivity {
                 }
             }
         }).start();
+
         btnRetour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,16 +73,22 @@ public class AchatValider extends AppCompatActivity {
         }).start();
     }
 
+    /**
+     * Auteur : Kéven
+     * arrête les threads lorqu'on sort de l'application
+     */
     @Override
     protected void onPause() {
         super.onPause();
         executeThread = false;
+        fini = true;
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         executeThread = false;
+        fini = true;
     }
 
 }
