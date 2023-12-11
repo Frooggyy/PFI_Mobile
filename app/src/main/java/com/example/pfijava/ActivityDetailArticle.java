@@ -12,15 +12,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 public class ActivityDetailArticle extends AppCompatActivity {
-
+    private Panier panier;
+    int quantite = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_article);
+        panier = Panier.getInstance();
 
         //Prendre tous Extras
         Intent i = getIntent();
@@ -45,9 +48,9 @@ public class ActivityDetailArticle extends AppCompatActivity {
         Button btnAjouter1 = findViewById(R.id.DA_btnPlus1);
         Button btnRetirer1 = findViewById(R.id.DA_btnMoins1);
         Button btnAjouterPanier = findViewById(R.id.DA_btnAjouterPanier);
-        Button btnRetour = findViewById(R.id.DA_btnRetour);
-        EditText nbAjouter = findViewById(R.id.DA_nbAjouter);
 
+        Button btnAnnuler = findViewById(R.id.btn_annuler);
+        EditText nbAjouter = findViewById(R.id.DA_nbAjouter);
 
         btnAjouter1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,9 +61,8 @@ public class ActivityDetailArticle extends AppCompatActivity {
                 }else{
                    nbArticles = parseInt(nbAjouter.getText().toString());
                 }
-
-
                 nbArticles++;
+                quantite = nbArticles;
                 nbAjouter.setText(String.valueOf(nbArticles));
             }
         });
@@ -71,6 +73,7 @@ public class ActivityDetailArticle extends AppCompatActivity {
                 if(nbArticles-1 >= 0){
                     nbArticles--;
                 }
+                quantite = nbArticles;
                 nbAjouter.setText(String.valueOf(nbArticles));
             }
         });
@@ -78,27 +81,47 @@ public class ActivityDetailArticle extends AppCompatActivity {
         btnAjouterPanier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Panier panier = Panier.getInstance();
-                int nbArticles;
-                if(nbAjouter.getText().toString().equals("")){
-                    nbArticles = 0;
-                }else{
-                    nbArticles = parseInt(nbAjouter.getText().toString());
-                    for(int i=1; i<= nbArticles;i++){
-                        panier.ajouterArticle(nom, prix);
-                    }
-                }
-                nbAjouter.setText("0");
 
+
+                if(quantite > 0){
+                    panier.ajouterArticle(nom, quantite, prix);
+                    Intent versLE = new Intent(ActivityDetailArticle.this, ListeEpicerie.class);
+                    startActivity(versLE);
+                } else {
+                    Toast.makeText(ActivityDetailArticle.this, getResources().getString(R.string.DA_Toast_quantite), Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
+//         btnAnnuler.setOnClickListener(new View.OnClickListener() {
+//             @Override
+//             public void onClick(View v) {
+//                 Intent versLE = new Intent(ActivityDetailArticle.this, ListeEpicerie.class);
+//                 startActivity(versLE);
+// =======
+//                 Panier panier = Panier.getInstance();
+//                 int nbArticles;
+//                 if(nbAjouter.getText().toString().equals("")){
+//                     nbArticles = 0;
+//                 }else{
+//                     nbArticles = parseInt(nbAjouter.getText().toString());
+//                     for(int i=1; i<= nbArticles;i++){
+//                         panier.ajouterArticle(nom, prix);
+//                     }
+//                 }
+//                 nbAjouter.setText("0");
+//             }
+//         });
 
         btnRetour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent versListe = new Intent(ActivityDetailArticle.this, ListeEpicerie.class);
                 startActivity(versListe);
+
             }
         });
     }
+
+
 }

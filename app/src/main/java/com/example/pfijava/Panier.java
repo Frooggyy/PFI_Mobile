@@ -21,22 +21,22 @@ public class Panier {
         return panierInstance;
     }
 
-    public void ajouterArticle(String nomArticle, Double prixArticle) {
+    public void ajouterArticle(String nomArticle, int quantite, Double prixArticle) {
         if (articlesDansPanier.containsKey(nomArticle)) {
             int quantiteActuelle = articlesDansPanier.get(nomArticle);
-            articlesDansPanier.put(nomArticle, quantiteActuelle + 1);
+            articlesDansPanier.put(nomArticle, quantiteActuelle + quantite);
             prixArticles.put(nomArticle, prixArticle);
         } else {
-            articlesDansPanier.put(nomArticle, 1);
+            articlesDansPanier.put(nomArticle, quantite);
             prixArticles.put(nomArticle, prixArticle);
         }
     }
 
-    public void retirerArticle(String nomArticle) {
+    public void retirerArticle(String nomArticle, int quantite) {
         if (articlesDansPanier.containsKey(nomArticle)) {
             int quantiteActuelle = articlesDansPanier.get(nomArticle);
-            if (quantiteActuelle > 1) {
-                articlesDansPanier.put(nomArticle, quantiteActuelle - 1);
+            if (quantiteActuelle - quantite > 0) {
+                articlesDansPanier.put(nomArticle, quantiteActuelle - quantite);
             } else {
                 articlesDansPanier.remove(nomArticle);
                 prixArticles.remove(nomArticle);
@@ -73,5 +73,19 @@ public class Panier {
 
     public double calculerPrixTotal() {
         return calculerTotal(prixArticles);
+    }
+
+    public boolean ArticleDansPanier(String nomArticle) {
+        if (articlesDansPanier.containsKey(nomArticle)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean ArticleDansPanier() {
+        if (articlesDansPanier.size() > 0) {
+            return true;
+        }
+        return false;
     }
 }

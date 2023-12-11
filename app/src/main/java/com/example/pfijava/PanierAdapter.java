@@ -1,6 +1,9 @@
 package com.example.pfijava;
 
 import android.content.Context;
+
+import android.media.MediaPlayer;
+
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +21,7 @@ import com.example.pfijava.Article;
 import com.example.pfijava.Panier;
 import com.example.pfijava.R;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -74,7 +78,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         holder.btnAjt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Panier.getInstance().ajouterArticle(nomArticle, prixArticle);
+                Panier.getInstance().ajouterArticle(nomArticle, 1, prixArticle);
                 notifyDataSetChanged();
                 listeAchat.MettreAJourTotal();
             }
@@ -83,13 +87,9 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         holder.btnRetrait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Panier.getInstance().retirerArticle(nomArticle, 1);
 
-                Panier.getInstance().retirerArticle(nomArticle);
-
-                int newQuantite = panier.getQuantiteArticle(nomArticle);
-
-                if (newQuantite == 0) {
-                    panier.retirerArticle(nomArticle);
+                if (!Panier.getInstance().ArticleDansPanier(nomArticle)) {
                     ListArticles.remove(holder.getAdapterPosition());
                     notifyDataSetChanged();
                 } else {
