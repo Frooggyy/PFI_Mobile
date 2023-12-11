@@ -26,6 +26,14 @@ import android.widget.VideoView;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Auteur:Kéven
+ * Cette classe est liée à au layout activity_liste_achat
+ * Cette activité montre un RecyclerView contenant
+ * tous les articles que l'utilisateur a ajouté dans son panier
+ * et permet par la suite de soit
+ * vider le panier, retourner vers la liste des articles ou achter le panier
+ */
 public class ListeAchat extends AppCompatActivity {
     private Panier panier;
     private PanierAdapter adaptateur;
@@ -51,11 +59,13 @@ public class ListeAchat extends AppCompatActivity {
         Button btnAnnuler = (Button) findViewById(R.id.achat_btnViderPanier);
         Button btnValider = (Button) findViewById(R.id.achat_btnAchatPanier);
 
+        //Section Vidéo fait par Gabriel
         VideoView vid = findViewById(R.id.achat_videoView);
 
         //Mettre video dans la page du panier
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(vid);
+
 
         Uri uriVid = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.panier);
         vid.setMediaController(mediaController);
@@ -72,6 +82,7 @@ public class ListeAchat extends AppCompatActivity {
 
         MettreAJourTotal();
 
+        //Section Animation fait par Gabriel
         Animation animation = AnimationUtils.loadAnimation(ListeAchat.this, R.anim.rotate);
         new Thread(new Runnable() {
 

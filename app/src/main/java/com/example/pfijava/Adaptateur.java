@@ -40,6 +40,7 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
         this.articles = arrArticle;
     }
 
+
     @NonNull
     @Override
     public Adaptateur.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -74,10 +75,22 @@ public class Adaptateur extends RecyclerView.Adapter<Adaptateur.MyViewHolder> {
 
 
     }
+
+    /**
+     * auteur : https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
+     * Prends un OnClick listener que l'on crée dans l'activity appelante et le 'set' dans l'adapteur
+     * @param onClickListener new OnClickListener créé par l'activity qui l'appelle
+     */
     public void setOnClickListener(OnClickListener onClickListener) {// TOUTE LA SECTION DE ONLCICKLISTENER DU RECYCLER VIEW
                                                                     // PRIS DE https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
         this.onClickListener = onClickListener;
     }
+
+    /**
+     * auteur : https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
+     * Interface qui prends la place de OnClickListener normal et
+     * contient une fonction OnClick qui est changée lorsque l'on appelle setOnClickListener
+     */
     public interface OnClickListener {                              // TOUTE LA SECTION DE ONLCICKLISTENER DU RECYCLER VIEW
                                                                     // PRIS DE https://www.geeksforgeeks.org/how-to-apply-onclicklistener-to-recyclerview-items-in-android/
         void onClick(Article article);

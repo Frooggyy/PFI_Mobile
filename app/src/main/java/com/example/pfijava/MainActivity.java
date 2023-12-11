@@ -14,6 +14,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Auteur:Kéven
+ * Cette classe est liée au layout acitivy_main
+ * Elle contient une page de connexion ou l'utilisateur
+ * doit entrer un nom d'utilisateur et un mot de passe
+ * afin de pouvoir accéder au reste de l'application
+ */
 public class MainActivity extends AppCompatActivity {
 
     boolean loginValide = false;
