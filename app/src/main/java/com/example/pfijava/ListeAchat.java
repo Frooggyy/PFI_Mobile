@@ -55,6 +55,7 @@ public class ListeAchat extends AppCompatActivity {
             public void onClick(View v) {
                 panier.viderPanier();
                 adaptateur.clearList();
+//                MettreAJourTotal();
 
                 Intent versLE = new Intent(ListeAchat.this, ListeEpicerie.class);
                 startActivity(versLE);
