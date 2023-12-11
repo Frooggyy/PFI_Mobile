@@ -2,44 +2,44 @@
 
     <string name="app_name">PFIJava</string>
     -- Page de bienvenue
-    <string name="AM_Bienvenue">MARCHER.online</string>
-    <string name="AM_PlaceholderNom">Nom</string>
-    <string name="AM_PlaceholderPass">Mot de passe</string>
-    <string name="AM_BtnLogin">Se Connecter</string>
-    <string name="errorLogin">"Le nom d'utilisateur ou le mot de passe est invalide. Veuiller recommencer."</string>
-    <string name="achatTitre">"Panier"</string>
+    <string name="AM_Bienvenue">MERCADO.online</string>
+    <string name="AM_PlaceholderNom">Nombre</string>
+    <string name="AM_PlaceholderPass">Contraseña</string>
+    <string name="AM_BtnLogin">Conectarse</string>
+    <string name="errorLogin">"El nombre de usuario o la contraseña no son válidos. Por favor, empieza de nuevo."</string>
+    <string name="achatTitre">"Cesta"</string>
 
     -- Liste Epicerie
-    <string name="LE_titre" tools:ignore="ExtraTranslation">Marché</string>
+    <string name="LE_titre" tools:ignore="ExtraTranslation">Mercado</string>
 
     -- Panier
-    <string name="achat_txtPrixTotal">Prix Total</string>
-    <string name="achat_btnViderPanier">Annuler</string>
-    <string name="achat_btnAchatPanier">Paiement</string>
-    <string name="poursuivre_achats">Poursuivre Mes Achats</string>
-    <string name="voirPanier">Voir Panier</string>
-    <string name="PA_toast_paniervide">Veuillez ajouter un ou des articles au panier afin de valider votre commande</string>
+    <string name="achat_txtPrixTotal">Precio total</string>
+    <string name="achat_btnViderPanier">Anular</string>
+    <string name="achat_btnAchatPanier">Pago</string>
+    <string name="poursuivre_achats">Continuar mis compras</string>
+    <string name="voirPanier">Ver carrito</string>
+    <string name="PA_toast_paniervide">Agregue uno o más artículos al carrito para validar su pedido.</string>
 
-    <string name="VA_titre">Votre Commande</string>
-    <string name="VA_btnRetour">Retour au marché</string>
-    <string name="Com_txtConfirmation">Merci pour votre achat !</string>
+    <string name="VA_titre">Su orden</string>
+    <string name="VA_btnRetour">Regreso al mercado</string>
+    <string name="Com_txtConfirmation">Gracias por su compra !</string>
 
 
     -- Page Description Articles
     <string name="DA_PlaceholderNbArticle">1</string>
     <string name="DA_AjouterUnArticle">+</string>
     <string name="DA_RetirerUnArticle">-</string>
-    <string name="DA_AjouterAuPanier">Ajouter au panier</string>
-    <string name="DA_DescriptionImage">Image de l\'article</string>
+    <string name="DA_AjouterAuPanier">Añadir a la cesta</string>
+    <string name="DA_DescriptionImage">imagen del artículo</string>
 
-    <string name="DA_Btn_annuler">Annuler</string>
-    <string name="DA_Toast_quantite">Veuillez saisir une quantité pour pursuivre</string>
+    <string name="DA_Btn_annuler">Anular</string>
+    <string name="DA_Toast_quantite">Por favor ingrese una cantidad para continuar</string>
 
-    <string name="DA_Retour">Retour</string>
+    <string name="DA_Retour">Regreso</string>
 
 
     --Description des viws
-    <string name="LE_descBtnPlayPause">Bouton qui fait jouer ou pause la musique</string>
+    <string name="LE_descBtnPlayPause">Botón que reproduce o pausa la música.</string>
 
     -- Description des articles
     <string name="articleDesc_banane">Banane</string>
