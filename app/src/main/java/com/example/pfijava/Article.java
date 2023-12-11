@@ -3,6 +3,11 @@ package com.example.pfijava;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
+/**
+ * Auteurs : Kéven et Gabriel
+ * Cette classe contient toutes les informations qu'un article
+ * peut contenir
+ */
 public class Article {
     private String nom;
     private double prix;
