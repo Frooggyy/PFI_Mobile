@@ -28,6 +28,7 @@ public class Musique {
 
     public  void jouer(){
         mediaPlayer.start();
+        mediaPlayer.setLooping(true);
         isPlaying = true;
     }
 
