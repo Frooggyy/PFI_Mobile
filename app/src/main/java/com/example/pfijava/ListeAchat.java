@@ -123,38 +123,29 @@ public class ListeAchat extends AppCompatActivity {
         btnValider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                  if(panier.ArticleDansPanier()){
-                     panier.viderPanier();
-                     adaptateur.clearList();
+                     new Thread(new Runnable() {
+                         @Override
+                         public void run() {
+                             MediaPlayer mp;
+                             mp = MediaPlayer.create(ListeAchat.this, Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.kaching));
+
+                             mp.start();
+                             while(mp.isPlaying()){}
+                             mp.stop();
+                             mp.release();
+                             mp = null;
+                         }
+                     }).start();
+
                      Intent versAchatValider = new Intent(ListeAchat.this, AchatValider.class);
+                     vid.stopPlayback();
+                     stopAnimation = true;
                      startActivity(versAchatValider);
+
                  } else {
                      Toast.makeText(ListeAchat.this, getResources().getString(R.string.PA_toast_paniervide), Toast.LENGTH_SHORT).show();
                  }
-
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        MediaPlayer mp;
-                        mp = MediaPlayer.create(ListeAchat.this, Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.kaching));
-
-                        mp.start();
-                        while(mp.isPlaying()){}
-                        mp.stop();
-                        mp.release();
-                        mp = null;
-
-                    }
-
-                }).start();
-
-                Intent versAchatValider = new Intent(ListeAchat.this, AchatValider.class);
-                vid.stopPlayback();
-                stopAnimation = true;
-                startActivity(versAchatValider);
-
             }
         });
     }
