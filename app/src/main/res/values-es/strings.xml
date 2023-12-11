@@ -47,6 +47,7 @@
     <string name="articleDesc_pois">"Guisantes verdes y dulces, perfectos para acompañar muchos platos o en ensaladas" (Ubicación: Francia, Granja: Petit Pois Français)</string>
     <string name="articleDesc_raisin">"Uvas jugosas, perfectas para picar o agregar a ensaladas de frutas" (Ubicación: Italia, Granja: Italian Sweet Grapes)</string>
     <string name="title_activity_panier">Carro</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

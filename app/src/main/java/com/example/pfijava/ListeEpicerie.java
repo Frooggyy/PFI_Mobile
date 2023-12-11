@@ -19,6 +19,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * Auteur: Gabriel
+ * Cette classe est liée au layout activity_liste_epicerie
+ * Elle permet de montrer à l'utilisateur la liste des article
+ * qui sont disponibles dans l'épicerie
+ */
 public class ListeEpicerie extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
