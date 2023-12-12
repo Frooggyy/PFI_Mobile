@@ -36,16 +36,16 @@
     <string name="LE_descBtnPlayPause">Botón que reproduce o pausa la música</string>
 
     <!-- Descriptions des articles -->
-    <string name="articleDesc_banane">"Plátanos amarillos y dulces, ricos en potasio y perfectos como snack saludable" (Ubicación: Ecuador, Granja: Tropicale Delicioso)</string>
-    <string name="articleDesc_cerise">"Cerezas rojas y jugosas, ideales para postres o simplemente para disfrutar tal como están" (Ubicación: Francia, Granja: Rouge Sucré)</string>
-    <string name="articleDesc_chou">"Repollo verde y crujiente, perfecto para ensaladas o platos salteados" (Ubicación: Canadá, Granja: Croquante Canadienne)</string>
-    <string name="articleDesc_champignon">"Setas frescas y sabrosas, perfectas para dar sabor a muchos platos" (Ubicación: EE. UU., Granja: ChampiFrais)</string>
-    <string name="articleDesc_courgette">"Calabacines verdes y crujientes, perfectos para platos a la parrilla o salteados" (Ubicación: España, Granja: Verte Espagnole)</string>
-    <string name="articleDesc_epinard">"Espinacas verdes ricas en hierro, perfectas para batidos o como acompañamiento" (Ubicación: Francia, Granja: Feuille Verte Française)</string>
-    <string name="articleDesc_mais">"Maíz amarillo dulce, perfecto para asar en verano o como acompañamiento" (Ubicación: EE. UU., Granja: American Golden)</string>
-    <string name="articleDesc_orange">"Naranjas jugosas llenas de vitamina C, perfectas para zumos o para comer como fruta" (Ubicación: España, Granja: Spanish Orange Juice)</string>
-    <string name="articleDesc_pois">"Guisantes verdes y dulces, perfectos para acompañar muchos platos o en ensaladas" (Ubicación: Francia, Granja: Petit Pois Français)</string>
-    <string name="articleDesc_raisin">"Uvas jugosas, perfectas para picar o agregar a ensaladas de frutas" (Ubicación: Italia, Granja: Italian Sweet Grapes)</string>
+    <string name="articleDesc_banane">Plátanos amarillos y dulces, ricos en potasio y perfectos como snack saludable (Ubicación: Ecuador, Granja: Tropicale Delicioso)</string>
+    <string name="articleDesc_cerise">Cerezas rojas y jugosas, ideales para postres o simplemente para disfrutar tal como están" (Ubicación: Francia, Granja: Rouge Sucré)</string>
+    <string name="articleDesc_chou">Repollo verde y crujiente, perfecto para ensaladas o platos salteados (Ubicación: Canadá, Granja: Croquante Canadienne)</string>
+    <string name="articleDesc_champignon">Setas frescas y sabrosas, perfectas para dar sabor a muchos platos (Ubicación: EE. UU., Granja: ChampiFrais)</string>
+    <string name="articleDesc_courgette">Calabacines verdes y crujientes, perfectos para platos a la parrilla o salteados" (Ubicación: España, Granja: Verte Espagnole)</string>
+    <string name="articleDesc_epinard">Espinacas verdes ricas en hierro, perfectas para batidos o como acompañamiento" (Ubicación: Francia, Granja: Feuille Verte Française)</string>
+    <string name="articleDesc_mais">Maíz amarillo dulce, perfecto para asar en verano o como acompañamiento (Ubicación: EE. UU., Granja: American Golden)</string>
+    <string name="articleDesc_orange">Naranjas jugosas llenas de vitamina C, perfectas para zumos o para comer como fruta (Ubicación: España, Granja: Spanish Orange Juice)</string>
+    <string name="articleDesc_pois">Guisantes verdes y dulces, perfectos para acompañar muchos platos o en ensaladas (Ubicación: Francia, Granja: Petit Pois Français)</string>
+    <string name="articleDesc_raisin">Uvas jugosas, perfectas para picar o agregar a ensaladas de frutas (Ubicación: Italia, Granja: Italian Sweet Grapes)</string>
     <string name="title_activity_panier">Carro</string>
 
     <!-- Strings used for fragments for navigation -->

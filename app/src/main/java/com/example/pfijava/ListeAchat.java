@@ -141,6 +141,8 @@ public class ListeAchat extends AppCompatActivity {
                      Intent versAchatValider = new Intent(ListeAchat.this, AchatValider.class);
                      vid.stopPlayback();
                      stopAnimation = true;
+                     panier.viderPanier();
+                     adaptateur.clearList();
                      startActivity(versAchatValider);
 
                  } else {

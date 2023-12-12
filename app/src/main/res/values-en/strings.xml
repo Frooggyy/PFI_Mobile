@@ -37,16 +37,16 @@
     <string name="LE_descBtnPlayPause">Button that plays or pauses the music</string>
 
     -- Description des articles
-    <string name="articleDesc_banane">\"\"Sweet yellow bananas, rich in potassium and perfect as a healthy snack\" (Location: Ecuador, Farm: Tropicale Delicioso)</string>
-    <string name="articleDesc_cerise">\"Juicy red cherries, ideal for desserts or simply to enjoy as they are\" (Location: France, Farm: Rouge Sucré)\"</string>
+    <string name="articleDesc_banane">Sweet yellow bananas, rich in potassium and perfect as a healthy snack (Location: Ecuador, Farm: Tropicale Delicioso)</string>
+    <string name="articleDesc_cerise">Juicy red cherries, ideal for desserts or simply to enjoy as they are (Location: France, Farm: Rouge Sucré)</string>
     <string name="articleDesc_chou">A crisp green cabbage, perfect for salads or stir-fry dishes\" (Location: Canada, Farm: Croquante Canadienne)</string>
-    <string name="articleDesc_champignon">Fresh, flavorful mushrooms, perfect for adding flavor to many dishes\" (Location: USA, Farm: ChampiFrais)</string>
-    <string name="articleDesc_courgette">Crisp, green zucchini, perfect for grilled or stir-fried dishes\" (Location: Spain, Farm: Verte Espagnole)</string>
-    <string name="articleDesc_epinard">Iron-rich green spinach, perfect for smoothies or as a side dish\" (Location: France, Farm: Feuille Verte Française)</string>
-    <string name="articleDesc_mais">Sweet, yellow corn on the cob, perfect for summer grilling or as a side dish\" (Location: USA, Farm: American Golden)</string>
-    <string name="articleDesc_orange">Juicy oranges full of vitamin C, perfect for juicing or eating as fruit\" (Location: Spain, Farm: Spanish Orange Juice)</string>
-    <string name="articleDesc_pois">Green, sweet peas, perfect with many dishes or in salads\" (Location: France, Farm: Petit Pois Français)</string>
-    <string name="articleDesc_raisin">Juicy grapes, perfect for snacks or to add to fruit salads\" (Location: Italy, Farm: Italian Sweet Grapes)</string>
+    <string name="articleDesc_champignon">Fresh, flavorful mushrooms, perfect for adding flavor to many dishes (Location: USA, Farm: ChampiFrais)</string>
+    <string name="articleDesc_courgette">Crisp, green zucchini, perfect for grilled or stir-fried dishes (Location: Spain, Farm: Verte Espagnole)</string>
+    <string name="articleDesc_epinard">Iron-rich green spinach, perfect for smoothies or as a side dish (Location: France, Farm: Feuille Verte Française)</string>
+    <string name="articleDesc_mais">Sweet, yellow corn on the cob, perfect for summer grilling or as a side dish (Location: USA, Farm: American Golden)</string>
+    <string name="articleDesc_orange">Juicy oranges full of vitamin C, perfect for juicing or eating as fruit (Location: Spain, Farm: Spanish Orange Juice)</string>
+    <string name="articleDesc_pois">Green, sweet peas, perfect with many dishes or in salads (Location: France, Farm: Petit Pois Français)</string>
+    <string name="articleDesc_raisin">Juicy grapes, perfect for snacks or to add to fruit salads (Location: Italy, Farm: Italian Sweet Grapes)</string>
     <string name="title_activity_panier">Cart</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
